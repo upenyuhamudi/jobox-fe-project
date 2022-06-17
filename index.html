@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+      <!-- Html2Pdf  -->
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js" 
+            integrity=
+    "sha512vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A==" 
+            crossorigin="anonymous">
+    </script>
+
+    <title>BMF Attorneys Contracts</title>
+</head>
+
+
+<body>
+    <form id ="form-print">
+    <div>
+        <h2>Fixed Term Agreement</h2>
+        <h4>between</h4>
+        <h3>BMF ATTORNEYS<br>with company registration number 2022/123456/07</h3>
+        <h4>and</h4>
+            <input type="text" value="Insert Client Name">
+        <h4>Collectively referred herein as the “parties”</h4>
+    </div>
+    <style>
+        ol {
+          counter-reset: item;
+        }
+        li {
+          display: block;
+        }
+        li:before {
+          content: counters(item, ".") " ";
+          counter-increment: item;
+        }
+    </style>
+      <ol>
+        <!-- Payment Terms -->
+        <li>Payment Terms
+            <ol>
+                BMF Attorney’s fee R <input type="number" value = 0> (excluding VAT). The retainer fee can be paid upfront, or month-to-month and the payment terms can be payable as follows:
+                    <ul class = "unordered">
+                        <li >Upfront:
+                            <ol>
+                                <li>Three-twelfths of the fee during the probation period in 3 equal instalments by the 7th day of each month</li>
+                                <li>Nine-twelfths of the fee upon conclusion of the probation period of employment payable on the 7th day of the 4th month.</li>
+                            </ol>
+                        </li>
+                        <li>Month-to-month:
+                            <ol>
+                                <li>The month-to-month fee shall be paid by the 7th day of each month</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li>No variation or amendment to this Agreement shall be of any effect unless such amendment is put in writing and signed by all parties</li>
+                <li>Any documentation prepared by BMF Attorneys remains its property</li>
+            </ol>
+        </li>
+        <!-- Appointment  -->
+        <li>Appointment
+            <ol>
+                <li>The Client has procured the services of BMF Attorneys and hereby accepts the appointment as an independent contractor of the Client for a fixed period of time.</li>
+                <li>The reason for this fixed-term contract is for the appointment and completion of the <input type="text" value="Insert Service Description"></li>
+            </ol>
+        </li>    
+        <!-- Duration -->
+        <li>Duration
+            <ol>
+                <li>Notwithstanding the date of signature hereof, this fixed term contract shall be deemed to have commenced on the <input type="date"> and will terminate, without further notice, on the <input type="date">. </li>
+                <li>The automatic termination of the contract on the Termination Date shall not be construed as a dismissal but as the completion of a fixed term contract.</li>
+            </ol>
+        </li>
+      </ol>
+
+      <h3>Signed at ____________________ on ____________________</h3>
+      <h3>________________________________</h3>
+      <h4>who warrants authority on behalf of BMF Attorneys</h4>
+      
+      <h3>Signed at ____________________ on ____________________</h3>
+      <h3>________________________________</h3>
+      <h4>who warrants authority on behalf of [Insert client name]</h4>
+
+    </form>  
+    
+    <input type="button" id="create_pdf" onclick="GeneratePdf();"value="Generate PDF Contract">
+    <script>          
+    // Function to GeneratePdf
+    function GeneratePdf() {
+        var element = document.getElementById('form-print');
+        html2pdf(element);
+    }
+    </script>
+      <script src=
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+              integrity=
+      "sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" 
+              crossorigin="anonymous">
+    </script>
+</body>
+
+
+</html>
+
